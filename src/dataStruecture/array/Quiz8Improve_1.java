@@ -18,7 +18,9 @@ public class Quiz8Improve_1 {
             //leftMax와 rightMax가 여기 있어야 하는 이유는
             // 1.left 혹은 right 포인터의 위치를 옮긴 이후에
             // 각각의 위치를 갱신해주어 야 한다.
-            leftMax = height[left] > leftMax ? height[left]: leftMax;
+            leftMax = Math.max(leftMax,height[left]);
+            rightMax = Math.max(rightMax,height[right]);
+
             rightMax = height[right] > rightMax ? height[right] : rightMax;
 
             if(leftMax <= rightMax){
